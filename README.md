@@ -50,6 +50,18 @@ Let's say you made a change to one of the app files locally, to "publish" your c
 2. `git commit -m "[A SHORT DESCRIPTION OF THE CHANGES]"`: describes the changes you made so that the rest of the team knows why you made them
 3. `git push origin main`: actually publishes (or pushes) your changes to GitHub where the rest of the team can see them
 
+Sometimes, you might get an error that looks something like this:
+
+```
+error: failed to push some refs to 'https://github.com/REDACTED.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+```
+
+This error happens when another member of your team published changes to GitHub and you haven't pulled them yet. To fix this, run `git pull origin main` (see "Pulling Changes" section below for more details) and then try running `git push origin main` again.
+
 ### Pulling Changes
 
 Let's say one of your teammates changed some files and pushed them using the steps above, and now you want to download them to your computer. To do so, simply run `git pull origin main`. This will "pull" all of the files on GitHub to your local computer.
