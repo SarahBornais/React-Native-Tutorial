@@ -81,3 +81,17 @@ while your teammate's `todo.txt` file looks like this:
  - make lunch
  - walk dog
 ```
+
+When you run `git pull origin main`, you'll get a "conflict" error and the file on your computer will now look something like this:
+
+```
+<<<<<<< HEAD
+ - do homework
+ - take a nap
+=======
+ - make lunch
+ - walk dog
+>>>>>>> q4q20joirnf0a
+```
+
+You will have to decide whether you want to only keep your own changes, only keep your teammate's changes, or keep both changes. You can then edit the file to reflect your decision. Then, you can follow all three steps from the "Pushing Changes" section to commit and push the file.
