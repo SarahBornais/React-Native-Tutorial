@@ -65,3 +65,19 @@ This error happens when another member of your team published changes to GitHub 
 ### Pulling Changes
 
 Let's say one of your teammates changed some files and pushed them using the steps above, and now you want to download them to your computer. To do so, simply run `git pull origin main`. This will "pull" all of the files on GitHub to your local computer.
+
+Sometimes when pulling changes, you may get a "conflict" error. This happens if you and a teammate have made conflicting changes to the same part of a file, and now git doesn't know which changes to keep.
+
+For example, say you and your teammate both created the same file called `todo.txt`. Your `todo.txt` file looks like this:
+
+```
+ - do homework
+ - take a nap
+```
+
+while your teammate's `todo.txt` file looks like this:
+
+```
+ - make lunch
+ - walk dog
+```
